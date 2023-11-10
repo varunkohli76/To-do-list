@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: rgb(148, 111, 183);
+    }
+
+    .container {
+        background-color: white;
+        width: 450px;
+        text-align: center;
+        min-height: 500px;
+        margin-left: 40%;
+        margin-top: 6%;
+        border-radius: 9px;
+        box-shadow: 0px 1px 9px 10px black;
+    }
+  
+
+    h1 {
+        color: brown;
+        font-size: 40px;
+    }
+
+    input {
+        border: 3px solid aqua;
+
+    }
+
+    input[type=text] {
+        padding: 10px;
+        margin: auto;
+    }
+
+    button {
+        width: 80px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        outline: none;
+        border-radius: 6px;
+    }
+    ul{
+     height: auto;
+    color: white;
+    width: 91%;
+    color: black;
+    position: relative;
+    text-align: center;
+    background-color:burlywood;
+    
+
+    }
+    #btn1{
+        position: absolute;
+        color: white;
+        background-color:black;
+        border:none;
+        margin-left:60px;
+        width:60px;
+        height: 20px;
+        float: right;
+    }
+    .btn4{
+        float:left;
+        width:60px;
+        height: 20px;
+    }
+    .hello{
+        text-decoration:line-through ;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>TO DO LIST</h1>
+        <div class="One">
+            <input type="text" placeholder="Enter your task" id="two" size="40">
+            <button onclick="Add()">Add</button>
+        </div>
+        <div class="three">
+
+        </div>
+    </div>
+
+
+
+    <script>
+let One=document.getElementById("two");
+let three=document.querySelector(".three");
+
+function Add(){
+    if(One.value==""){
+        alert("Please enter the task")
+}else{
+        let newele = document.createElement("ul");
+        newele.innerHTML=`<button class="btn4">Done</button>${One.value}<button id="btn1" onclick="Delete()">Delete</button>`
+       three.appendChild(newele);
+        One.value="";
+    }
+}
+
+
+function Delete(){
+    let deletee=document.getElementById('btn1');
+    deletee.parentElement.remove('three');
+}
+
+three.addEventListener('click', function (f) {
+					if (f.target.classList.contains('btn4')) {
+						f.target.parentElement.classList.toggle('hello')
+					}
+				})
+			
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- let done = document.querySelectorAll("#done");
+for(let i=0; i<done.length; i++){
+    done[i].onclick = function(){
+        let item = this.parentNode.parentNode;
+        if (item.style.textDecoration === 'line-through') {
+            item.style.textDecoration = 'none';
+        } else {
+            item.style.textDecoration = 'line-through';
+        }
+    }
+    }
+}
+
+
+document.querySelector('#additem').value="";
+} -->
