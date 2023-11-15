@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    background-image: url('/assets/images/bgimg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    backdrop-filter: blur(3px);
+    width: 450px;
+    text-align: center;
+    min-height: 500px;
+    margin-left: 35%;
+    margin-top: 6%;
+    border-radius: 9px;
+    box-shadow: 0px 1px 9px 10px black;
+}
+h1 {
+    background-color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: wheat;
+    font-size: 40px;
+}
+input {
+    border: 7px solid grey;
+    color: black;
+    background-color: white;
+}
+input[type=text] {
+    padding: 10px;
+    margin-top: 20px;
+}
+button {
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+ul {
+    font-size: 18px;
+    min-height: 40px;
+    text-align: center;
+    color: black;
+    position: relative;
+    background-color: white;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+      
+#btn1 {
+    position: absolute;
+    color: white;
+    background-color: black;
+    border: none;
+    margin-top: -5px;
+    float: right;
+    right: 10px;
+}
+.btn4 {
+    position: absolute;
+    margin-top: -5px;
+    float: left;
+    left: 10px;
+}
+.hello {
+    text-decoration: line-through;
+}
+/* .textalign{
+    padding-: 50px;
+} */
